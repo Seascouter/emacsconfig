@@ -53,7 +53,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(web-mode org-bullets magit counsel-projectile projectile all-the-icons doom-themes helpful which-key counsel ivy-rich rainbow-delimiters doom-modeline ivy command-log-mode use-package evil)))
+   '(auto-complete rust-mode web-mode org-bullets magit counsel-projectile projectile all-the-icons doom-themes helpful which-key counsel ivy-rich rainbow-delimiters doom-modeline ivy command-log-mode use-package evil)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -171,3 +171,11 @@
 
 ;; Auto close things
 (electric-pair-mode 1)
+
+(use-package rust-mode)
+
+(setq backup-directory-alist `(("." . "~/.emacssaves")))
+
+(use-package auto-complete
+  :custom
+  (ac-config-default))
